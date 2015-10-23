@@ -10,5 +10,5 @@ require_relative 'models/db_base'
 require_relative 'models/bookmark'
 
 get '/' do
-  erb :index
+  redirect to('/bookmarks')
 end
