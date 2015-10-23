@@ -1,0 +1,19 @@
+<dl>
+  <dt><label for='bookmark_url'>URL: </label></dt>
+  <dd><input id='bookmark_url' name='bookmark[url]' type='text' autofocus size='50' placeholder='http://...' value="<%= @bookmark.url %>"></dd>   
+</dl>
+<br />
+<dl>
+  <dt><label for='bookmark_name'>Name: </label></dt>
+  <dd><input id='bookmark_name' name='bookmark[name]' type='text' size='50' placeholder='Name your bookmark' value="<%= @bookmark.name %>"></dd>
+</dl>
+<br />
+<dl>
+  <dt><label for='bookmark_type'>Type: </label></dt>
+  <dd><input id='bookmark_type' name='bookmark[type]' type='text' size='50' placeholder='What is this site?' value="<%= @bookmark.type %>"></dd>
+</dl>
+<br />
+<dl>
+  <dt><label for='bookmark_details'>Details: </label></dt>
+  <dd><textarea id='bookmark_details' name='bookmark[details]' placeholder='(optional)Describe the site.'><%= @bookmark.details %></textarea></dd>
+</dl>

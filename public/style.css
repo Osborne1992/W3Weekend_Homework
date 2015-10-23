@@ -1,0 +1,78 @@
+body {
+  background-color: darkblue;
+  color: #FFC800;
+  font-family: Arial, Helvetica, 'Times New Roman';
+  width: 960px;
+  margin: 0px auto 0px auto;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+}
+
+nav li {
+  display: inline;
+  padding: 5px;
+  background-color: #000000;
+  border-radius: 5px;
+  padding: 3px 7px 3px 7px;
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+header {
+  background: linear-gradient(90deg, darkblue, blue, darkblue);
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.mainbody {
+  padding-top: 10px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+dl {
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0
+}
+dt {
+  float: left;
+  width: 20%;
+  padding: 0;
+  margin: 0
+}
+dd {
+  float: right;
+  width: 80%;
+  padding: 0;
+  margin: 0
+}
+
+textarea {
+    width: 305px;
+    height: 150px;
+}
+
+button {
+  border-radius: 5px;
+  border: none;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.bueton {
+  border-radius: 5px;
+  font: 11px Arial;
+  text-decoration: none;
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 3px 10px 2px 10px;
+}

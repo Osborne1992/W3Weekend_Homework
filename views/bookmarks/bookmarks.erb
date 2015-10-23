@@ -1,0 +1,14 @@
+<br />
+<center>
+  <h2>Your Stored Bookmarks</h2>
+</center>
+<br />
+<% @bookmarks.each do |bookmark| %>
+    <dl>
+      <dt>Bookmark: </dt>
+      <dd><%= bookmark.name %></dd>
+    </dl>
+    <br />
+    <a href="/bookmarks/<%= bookmark.id %>" class='bueton'>SHOW</a> | <a href="<%= bookmark.url %>" class='bueton'>VISIT</a>
+    <p></p>
+<% end %>

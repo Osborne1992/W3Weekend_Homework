@@ -1,0 +1,23 @@
+<br />
+<h2><%= @bookmark.name %></h2>
+<section>
+  <article>
+    <dl>
+      <dt>URL: </dt>
+      <dd><a href="<%= @bookmark.url %>" class='bueton'>GO</a> --> <%= @bookmark.url %></dd>
+    </dl>
+    <br />
+    <dl>
+      <dt>Type: </dt>
+      <dd><%= @bookmark.type %></dd>
+    </dl>
+    <br />
+    <dl>
+      <dt>Details: </dt>
+      <dd><%= @bookmark.details %></dd>
+    </dl>
+  </article>
+</section>
+<br />
+<form method='post' action='/bookmarks/<%= @bookmark.id %>/delete'>
+<a href="/bookmarks/<%= @bookmark.id %>/edit" class="bueton">EDIT</a> | <button>DELETE</button> 
