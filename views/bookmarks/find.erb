@@ -1,23 +1,20 @@
-<br />
-<h2><%= @bookmark.name %></h2>
-<section>
-  <article>
-    <dl>
-      <dt>URL: </dt>
-      <dd><a href="<%= @bookmark.url %>" class='bueton'>GO</a> - <%= @bookmark.url %></dd>
-    </dl>
-    <br />
-    <dl>
-      <dt>Type: </dt>
-      <dd><%= @bookmark.type %></dd>
-    </dl>
-    <br />
-    <dl>
-      <dt>Details: </dt>
-      <dd><%= @bookmark.details %></dd>
-    </dl>
-  </article>
-</section>
-<br />
-<form method='post' action='/bookmarks/<%= @bookmark.id %>/delete'>
-<a href="/bookmarks/<%= @bookmark.id %>/edit" class="bueton">EDIT</a> | <button class='bueton'>DELETE</button> 
+  <br />
+<div class='search'
+  <form class='nav-form' method='get' action='/bookmarks/find'>
+    <input id='bookmarks_search' type='text' placeholder='Search...'>
+  </form>
+  <button class='bueton'>Search</button>
+</div>
+<center>
+  <h2>Your Stored Bookmarks</h2>
+</center>
+  <br />
+<% @bookmarks.each do |bookmark| %>
+  <dl>
+    <dt>Bookmark: </dt>
+    <dd><%= bookmark.name %></dd>
+  </dl>
+  <br />
+  <a href="/bookmarks/<%= bookmark.id %>" class='bueton'>SHOW</a> | <a href="<%= bookmark.url %>" class='bueton'>VISIT</a>
+  <p></p>
+<% end %>
