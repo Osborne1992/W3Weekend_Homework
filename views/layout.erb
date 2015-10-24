@@ -8,15 +8,15 @@
 <body>
   <header>
     <center>
-      <h1>My Bookmarker App</h1>
+      <h1>The Bookmarker</h1>
       <nav>
         <ul>
           <li><a href="/bookmarks">Home</a></li>
           <li><a href="/bookmarks/new">New</a></li>
           <li><a href="/bookmarks">Surprise Link</a></li>
         </ul>
-        <form method='get' action='/bookmarks/find'><input id='bookmarks_search' type='text' placeholder='Search...'></form><button>SEARCH</button>
       </nav>
+        <form method='get' action='/bookmarks/find'><input id='bookmarks_search' type='text' placeholder='Search...'></form><button>SEARCH</button>
     </header>
     <div class='mainbody'>
       <%= yield %>
