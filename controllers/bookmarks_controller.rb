@@ -12,7 +12,8 @@ get '/bookmarks/find' do
 end
 
 get '/bookmarks/surprise' do
-  @bookmarks = (1..Bookmark.all.size).sample
+  @bookmarks = Bookmark.all.sample
+  redirect to(@bookmarks.url)
 end
 
 get '/bookmarks/new' do
