@@ -23,8 +23,11 @@ class DBBase
     result
   end
 
-  def self.all
-    results = run_sql("SELECT * FROM bookmarks order by name asc")
+  def self.all(conditions={})
+    where = conditions.map { |attribute, value| "#{attribute} = #{sql_sanitize(value, get_attributes[attribute])}" }.join(' AND ')
+    where = "WHERE #{where}" unless where.empty?
+
+    results = run_sql("SELECT bookmarks.* FROM bookmarks #{where}")
     results.map { |result| self.new(result) }
   end
 

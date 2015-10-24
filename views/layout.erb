@@ -11,16 +11,17 @@
       <h1>The Bookmarker</h1>
       <nav>
         <ul>
-          <li><a href="/bookmarks">Home</a></li>
-          <li><a href="/bookmarks/new">New</a></li>
-          <li><a href="/bookmarks">Surprise Link</a></li>
+          <li><a href="/bookmarks" class='bueton'>Home</a></li>
+          <li><a href="/bookmarks/new" class='bueton'>New</a></li>
+          <li><a href="/bookmarks/surprise" class='bueton'>Surprise Link</a></li>
         </ul>
       </nav>
-        <form method='get' action='/bookmarks/find'><input id='bookmarks_search' type='text' placeholder='Search...'></form><button>SEARCH</button>
-    </header>
-    <div class='mainbody'>
-      <%= yield %>
-    </div>
-  </center>
+      <br />
+    </center>
+  </header>
+  <div class='mainbody'>
+    <%= yield %>
+  </div>
+
 </body>
 </html>

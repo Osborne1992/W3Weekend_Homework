@@ -6,6 +6,15 @@ get '/bookmarks' do
   erb :'bookmarks/bookmarks'
 end
 
+get '/bookmarks/find' do
+  @bookmarks = Bookmark.all(name: params[:search])
+  erb :'bookmarks/find'
+end
+
+get '/bookmarks/surprise' do
+  @bookmarks = (1..Bookmark.all.size).sample
+end
+
 get '/bookmarks/new' do
   
   @bookmark = Bookmark.new
