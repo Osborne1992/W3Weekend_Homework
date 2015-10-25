@@ -27,7 +27,7 @@ class DBBase
     where = conditions.map { |attribute, value| "#{attribute} = #{sql_sanitize(value, get_attributes[attribute])}" }.join(' AND ')
     where = "WHERE #{where}" unless where.empty?
 
-    results = run_sql("SELECT bookmarks.* FROM bookmarks #{where}")
+    results = run_sql("SELECT bookmarks.* FROM bookmarks #{where} order by name asc")
     results.map { |result| self.new(result) }
   end
 
@@ -85,6 +85,7 @@ class DBBase
 
       sql_fields_and_values = attributes.map do |attribute, type|
         "#{attribute} = #{sql_sanitize(self.send(attribute), type)}"
+
       end
 
       sql = "UPDATE bookmarks SET #{sql_fields_and_values.join(', ')} WHERE id = #{sql_sanitize(id, :integer)}"
