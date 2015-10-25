@@ -33,8 +33,26 @@ header {
 
 .mainbody {
   padding-top: 10px;
-  width: 50%;
   margin: 0 auto;
+}
+
+.sidenav {
+  width: 200px;
+  float: left;
+  padding-left: 160px;
+}
+
+.sidenav ul {
+  list-style-type: none;
+}
+
+.sidenav li {
+  display: block;
+}
+
+.content {
+  width: 600px;
+  float: right;
 }
 
 dl {

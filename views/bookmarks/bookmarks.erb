@@ -1,15 +1,23 @@
   <br />
-<div class='search'
+<center>
+  <div class='search'
   <form class='nav-form' method='get' action='/bookmarks/find'>
     <input id='bookmarks_search' type='text' placeholder='Search...'>
+    <button class='bueton'>Search</button>
   </form>
-  <button class='bueton'>Search</button>
 </div>
-<center>
   <h2>Your Stored Bookmarks</h2>
 </center>
-  <br />
+<br />
+<div class='sidenav'>
 <% @bookmarks.each do |bookmark| %>
+<ul>
+  <li><%= bookmark.type %></li>
+</ul>
+<% end %>
+</div>
+<div class='content'>
+  <% @bookmarks.each do |bookmark| %>
   <dl>
     <dt>Bookmark: </dt>
     <dd><%= bookmark.name %></dd>
@@ -17,4 +25,5 @@
   <br />
   <a href="/bookmarks/<%= bookmark.id %>" class='bueton'>SHOW</a> | <a href="<%= bookmark.url %>" class='bueton'>VISIT</a>
   <p></p>
-<% end %>
+  <% end %>
+</div>
