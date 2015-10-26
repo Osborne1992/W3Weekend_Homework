@@ -1,9 +1,11 @@
-puts
-
 get '/bookmarks' do
 
   @bookmarks = Bookmark.all
   erb :'bookmarks/bookmarks'
+end
+
+get 'bookmarks/type' do
+  @bookmarks = Bookmark.all.type
 end
 
 get '/bookmarks/find' do
