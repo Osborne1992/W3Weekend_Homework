@@ -4,8 +4,9 @@ get '/bookmarks' do
   erb :'bookmarks/bookmarks'
 end
 
-get 'bookmarks/type' do
-  @bookmarks = Bookmark.all.type
+get '/bookmarks/type/:type' do
+  @bookmarks = Bookmark.all(type: params[:type])
+  erb :'bookmarks/bookmarks'
 end
 
 get '/bookmarks/find' do

@@ -6,7 +6,7 @@
 <div class='sidenav'>
 <% @bookmarks.each do |bookmark| %>
 <ul>
-  <li><a href="/bookmarks/<%= bookmark.type %>"><%= bookmark.type %></a></li>
+  <li><a href="/bookmarks/type/<%= bookmark.type %>"><%= bookmark.type %></a></li>
 </ul>
 <% end %>
 </div>
